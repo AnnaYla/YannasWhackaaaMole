@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gap: 8px;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container {
+  width: min(90vw, 800px);
+  padding: 16px;
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  width: min(90vmin, 480px);
+  aspect-ratio: 1 / 1;
+  border: 2px solid #222;
+  border-radius: 12px;
+  padding: var(--gap);
+}
+.cell {
+  flex: 1 0 calc(33.333% - var(--gap));
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  background: salmon;
+  border: 2px solid brown;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cell:focus {
+  outline: 3px solid #0a7;
+  outline-offset: 2px;
+}
+/* Temporär visuell mullvad , byt gärna mot egen grafik. */
+.cell .mole {
+  width: 90%;
+  height: 90%;
+  background-image: url(./src/mole-normal.png);
+  background-size: contain;
+ 
+}
+
+.mole.hit{
+  background-image: url(./src/mole-hit.png);
+}
+

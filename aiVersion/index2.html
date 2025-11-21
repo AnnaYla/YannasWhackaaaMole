@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack a Fish by Alyanna</title>
+    <link rel="stylesheet" href="style2.css" />
+    <script type="module" src="main2.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <h1>Whack a Fish by Alyanna</h1>
+    </header>
+    <main class="container">
+      <section class="hud" aria-label="Spelkontroller">
+        <div class="controls">
+          <button id="startBtn" type="button">Starta</button>
+          <button id="resetBtn" type="button">Reset</button>
+        </div>
+        <div class="stats" role="status" aria-live="polite">
+          <span id="score">Poäng: 0</span>
+          <span id="time">Tid: 60</span>
+          <span id="misses">Missar: 0</span>
+        </div>
+      </section>
+      <section
+        id="board"
+        class="board"
+        aria-label="Spelbräde"
+        aria-live="off"
+      ></section>
+    </main>
+  </body>
+</html>
